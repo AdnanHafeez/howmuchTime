@@ -3,7 +3,7 @@ var watchID = null;
 var arrLocations = [];
 const DISTANCE = 100;
 const TIMEOUT = 300000;
-const INTERVAL = 5000;
+const INTERVAL = 60000;
 var locationFunction;
 
 function addDebug(msg) {
@@ -43,6 +43,15 @@ function onSuccess(position){
   let latitude = position.coords.latitude;
   let time = position.timestamp;
   addPoint({Longitude:longitude,Latitude:latitude});
+  //showLocations();
+}
+
+function showLocations() {
+  //TODO: ADD CODE TO ADD TABLE ROWS
+  arrLocations.forEach(function(arrItem, index){
+
+
+  });
 }
 
 function addPoint(newLocation) {
